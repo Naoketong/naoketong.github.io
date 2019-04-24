@@ -96,13 +96,19 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Naokotong">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="使用 Vuex 来完成我们的数据全局交互下载vuex1npm install --save vuex 在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用12345678910111213141516171819202122232425262728293031323334353637383940414243444546import Vue from &amp;apo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vuex">
+<meta property="og:url" content="http://yoursite.com/2019/04/24/Vuex/index.html">
 <meta property="og:site_name" content="Naokotong">
+<meta property="og:description" content="使用 Vuex 来完成我们的数据全局交互下载vuex1npm install --save vuex 在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用12345678910111213141516171819202122232425262728293031323334353637383940414243444546import Vue from &amp;apo">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/15.png">
+<meta property="og:updated_time" content="2019-04-24T12:52:04.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Naokotong">
+<meta name="twitter:title" content="Vuex">
+<meta name="twitter:description" content="使用 Vuex 来完成我们的数据全局交互下载vuex1npm install --save vuex 在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用12345678910111213141516171819202122232425262728293031323334353637383940414243444546import Vue from &amp;apo">
+<meta name="twitter:image" content="http://yoursite.com/img/15.png">
 
 
 
@@ -110,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/24/Vuex/">
 
 
 
@@ -120,7 +126,7 @@
   };
 </script>
 
-  <title>Naokotong</title>
+  <title>Vuex | Naokotong</title>
   
 
 
@@ -168,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +212,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -320,9 +325,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -354,10 +359,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/24/Vuex/" class="post-title-link" itemprop="url">Vuex</a>
+          <h1 class="post-title" itemprop="name headline">Vuex
+
               
             
           </h1>
@@ -439,9 +442,7 @@
       
 
       
-        
-          
-            <h2 id="使用-Vuex-来完成我们的数据全局交互"><a href="#使用-Vuex-来完成我们的数据全局交互" class="headerlink" title="使用 Vuex 来完成我们的数据全局交互"></a>使用 Vuex 来完成我们的数据全局交互</h2><h3 id="下载vuex"><a href="#下载vuex" class="headerlink" title="下载vuex"></a>下载vuex</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vuex</span><br></pre></td></tr></table></figure>
+        <h2 id="使用-Vuex-来完成我们的数据全局交互"><a href="#使用-Vuex-来完成我们的数据全局交互" class="headerlink" title="使用 Vuex 来完成我们的数据全局交互"></a>使用 Vuex 来完成我们的数据全局交互</h2><h3 id="下载vuex"><a href="#下载vuex" class="headerlink" title="下载vuex"></a>下载vuex</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vuex</span><br></pre></td></tr></table></figure>
 <h3 id="在根目录新建一个文件夹，创建-store-js文件，编辑公共内容，然后在main-js里引用"><a href="#在根目录新建一个文件夹，创建-store-js文件，编辑公共内容，然后在main-js里引用" class="headerlink" title="在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用"></a>在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import Vuex from &apos;vuex&apos;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">   // state 类似 data</span><br><span class="line">   //这里面写入数据</span><br><span class="line">    filter: &apos;all&apos;,</span><br><span class="line">    todos:[</span><br><span class="line">      &#123;title: &apos;吃饭饭&apos;,completed: true,editing: false&#125;,</span><br><span class="line">      &#123;title: &apos;睡觉觉&apos;,completed: false,editing: false&#125;,</span><br><span class="line">      &#123;title: &apos;打豆豆&apos;,completed: false,editing: false&#125;,</span><br><span class="line">      &#123;title: &apos;我不是豆豆！&apos;,completed: true,editing: false&#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">  getters:&#123;</span><br><span class="line">   // mutations 类似methods</span><br><span class="line">   // 写方法对数据做出更改(同步操作)</span><br><span class="line">    todosCount: (state) =&gt; &#123;//foot</span><br><span class="line">      return state.todos.length</span><br><span class="line">    &#125;,</span><br><span class="line">    hasCompleted: (state) =&gt; &#123;//foot</span><br><span class="line">      return state.todos.some(data =&gt; data.completed)</span><br><span class="line">    &#125;,</span><br><span class="line">    allCompleted: (state) =&gt; &#123;//list</span><br><span class="line">      return state.todos.every(data =&gt; data.completed)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    // getters 类似 computed </span><br><span class="line">    // 在这里面写个方法</span><br><span class="line">    changeFilter (state, filter) &#123;//todoVue</span><br><span class="line">      state.filter = filter</span><br><span class="line">    &#125;,</span><br><span class="line">    create (state, todo) &#123;//head</span><br><span class="line">      state.todos.push(todo)</span><br><span class="line">    &#125;,</span><br><span class="line">    removeCompleted (state) &#123;//foot</span><br><span class="line">      state.todos = state.todos.filter(data =&gt; !data.completed)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    // actions 类似methods</span><br><span class="line">    // 写方法对数据做出更改(异步操作)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="然后在-main-js引用"><a href="#然后在-main-js引用" class="headerlink" title="然后在 main.js引用"></a>然后在 main.js引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mport Vue from &apos;vue&apos;</span><br><span class="line">import App from &apos;./App.vue&apos;</span><br><span class="line">import router from &apos;./router&apos;</span><br><span class="line">import store from &apos;./store&apos;</span><br></pre></td></tr></table></figure>
 <h3 id="通过在根实例中注册-store-选项，该-store-实例会注入到根组件下的所有子组件中，且子组件能通过-this-store-访问到"><a href="#通过在根实例中注册-store-选项，该-store-实例会注入到根组件下的所有子组件中，且子组件能通过-this-store-访问到" class="headerlink" title="通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到"></a>通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到</h3><h2 id="修改Todos-vue的内容"><a href="#修改Todos-vue的内容" class="headerlink" title="修改Todos.vue的内容"></a>修改Todos.vue的内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">     &lt;section class=&quot;todoapp&quot; v-cloak&gt;</span><br><span class="line">      &lt;the-header /&gt;</span><br><span class="line">      &lt;the-list /&gt;</span><br><span class="line">      &lt;the-footer /&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &apos;@/assets/base.css&apos;;</span><br><span class="line">  import &apos;@/assets/index.css&apos;;</span><br><span class="line">  import TheHeader from &apos;@/components/TheHeader.vue&apos;;</span><br><span class="line">  import TheList from &apos;@/components/TheLister.vue&apos;;</span><br><span class="line">  import TheFooter from &apos;@/components/TheFooter.vue&apos;;</span><br><span class="line">  </span><br><span class="line">  export default&#123;    </span><br><span class="line">    created() &#123;</span><br><span class="line">      this.fetchFilter();</span><br><span class="line">    &#125;,</span><br><span class="line">    watch: &#123;</span><br><span class="line">      &apos;$route&apos;: &apos;fetchFilter&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      fetchFilter: function() &#123;</span><br><span class="line">        let filter = this.$route.params.id || &apos;all&apos;;</span><br><span class="line">        this.$store.commit(&apos;changeFilter&apos;, filter)</span><br><span class="line">      &#125;,</span><br><span class="line">      changeFilter (key, event) &#123;//项目筛选</span><br><span class="line">        this.filter = key</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    components: &#123;</span><br><span class="line">      &apos;the-header&apos;: TheHeader,</span><br><span class="line">      &apos;the-list&apos;: TheList,</span><br><span class="line">      &apos;the-footer&apos;: TheFooter,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -450,8 +451,6 @@
 <h4 id="TheFooter-vue"><a href="#TheFooter-vue" class="headerlink" title="TheFooter.vue"></a>TheFooter.vue</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;footer class=&quot;footer&quot; v-show=&quot;todosCount&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;todo-count&quot;&gt;&lt;strong&gt;&#123;&#123;todosCount&#125;&#125;&lt;/strong&gt; 总数&lt;/span&gt;</span><br><span class="line">    &lt;ul class=&quot;filters&quot;&gt;        </span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;router-link to=&quot;/all&quot; :class=&quot;&#123;selected: filter === &apos;all&apos;&#125;&quot; &gt;全部&lt;/router-link&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;router-link to=&quot;/await&quot; :class=&quot;&#123;selected: filter === &apos;await&apos;&#125;&quot;&gt;待办&lt;/router-link&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;router-link to=&quot;/achieve&quot; :class=&quot;&#123;selected: filter === &apos;achieve&apos;&#125;&quot;&gt;已完成&lt;/router-link&gt;</span><br><span class="line">      &lt;/li&gt;          </span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;button class=&quot;clear-completed&quot; v-show=&quot;hasCompleted&quot; @click=&quot;removeCompleted&quot;&gt;清除已完成&lt;/button&gt;</span><br><span class="line">  &lt;/footer&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default&#123;</span><br><span class="line">  	name: &apos;TheFooter&apos;,</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    props: &#123;</span><br><span class="line">      todos: &#123;</span><br><span class="line">        type: Array,</span><br><span class="line">        default: () =&gt; &#123;</span><br><span class="line">          return []</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">      filter() &#123;</span><br><span class="line">        return this.$store.state.filter</span><br><span class="line">      &#125;,</span><br><span class="line">      todosCount() &#123;</span><br><span class="line">        return this.$store.getters.todosCount</span><br><span class="line">      &#125;,</span><br><span class="line">      hasCompleted() &#123;</span><br><span class="line">        return this.$store.getters.hasCompleted</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      removeCompleted: function() &#123;</span><br><span class="line">        this.$store.commit(&apos;removeCompleted&apos;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="大功告成，无Bug无报错"><a href="#大功告成，无Bug无报错" class="headerlink" title="大功告成，无Bug无报错"></a>大功告成，无Bug无报错</h2><p><img src="/img/15.png"></p>
 
-          
-        
       
     </div>
 
@@ -474,178 +473,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/23/Vue-router/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiaozhao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Naokotong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/23/Vue-router/" class="post-title-link" itemprop="url">Vue-router</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/04/23/Vue-router/" rel="next" title="Vue-router">
+                <i class="fa fa-chevron-left"></i> Vue-router
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-23 21:07:45 / 修改时间：21:40:16" itemprop="dateCreated datePublished" datetime="2019-04-23T21:07:45+08:00">2019-04-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="使用-watch-监听-router-的变化"><a href="#使用-watch-监听-router-的变化" class="headerlink" title="使用 watch 监听 $router 的变化"></a>使用 watch 监听 $router 的变化</h2><h2 id="在根目录里main-js里添加路由"><a href="#在根目录里main-js里添加路由" class="headerlink" title="在根目录里main.js里添加路由"></a>在根目录里main.js里添加路由</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import router from &apos;@/router/index&apos;</span><br></pre></td></tr></table></figure>
-<h3 id="同时在new-Vue里加上变量名"><a href="#同时在new-Vue里加上变量名" class="headerlink" title="同时在new Vue里加上变量名"></a>同时在new Vue里加上变量名</h3><p><img src="/img/10.png"></p>
-<h3 id="新建router文件夹-index-js-加下以上内容"><a href="#新建router文件夹-index-js-加下以上内容" class="headerlink" title="新建router文件夹/index.js,加下以上内容"></a>新建router文件夹/index.js,加下以上内容</h3><p><img src="/img/11.png"></p>
-<h3 id="新建views-Todos-Vue文件，同时把app-vue的内容迁移到odos-Vue-app-vue里只配置"><a href="#新建views-Todos-Vue文件，同时把app-vue的内容迁移到odos-Vue-app-vue里只配置" class="headerlink" title="新建views/Todos.Vue文件，同时把app.vue的内容迁移到odos.Vue,app.vue里只配置"></a>新建views/Todos.Vue文件，同时把app.vue的内容迁移到odos.Vue,app.vue里只配置<router-view></router-view></h3><p><img src="/img/12.png"></p>
-<h2 id="添加路由"><a href="#添加路由" class="headerlink" title="添加路由"></a>添加路由</h2><p>在底部导航配置 router-link 抽离容器组件 TheTodes 使用 watch 监听 $router 的变化，在触发的回调函数中获取 params 的值，修改 filter 数据。同时在页面 created 生命周期中也调用此回调函数。<br><img src="/img/13.png"></p>
-<h3 id="对底部导航进行路由配置，v-for循环filters列表，当filter-key值时，去识别当前的filter，由此去切换路由。"><a href="#对底部导航进行路由配置，v-for循环filters列表，当filter-key值时，去识别当前的filter，由此去切换路由。" class="headerlink" title="对底部导航进行路由配置，v-for循环filters列表，当filter===key值时，去识别当前的filter，由此去切换路由。"></a>对底部导航进行路由配置，v-for循环filters列表，当filter===key值时，去识别当前的filter，由此去切换路由。</h3><h3 id="class绑定"><a href="#class绑定" class="headerlink" title=":class绑定"></a>:class绑定</h3><h3 id="我们可以向-v-bind-class-传入一个对象，来动态地切换-class"><a href="#我们可以向-v-bind-class-传入一个对象，来动态地切换-class" class="headerlink" title="我们可以向 v-bind:class 传入一个对象，来动态地切换 class"></a>我们可以向 v-bind:class 传入一个对象，来动态地切换 class</h3><h2 id="在Todos-Vue里使用-watch-监听-router-的变化"><a href="#在Todos-Vue里使用-watch-监听-router-的变化" class="headerlink" title="在Todos.Vue里使用 watch 监听 $router 的变化"></a>在Todos.Vue里使用 watch 监听 $router 的变化</h2><p><img src="/img/14.png"></p>
-<h3 id="当路由id为filter-”all”时，会切换回all状态，展示所有状态todos"><a href="#当路由id为filter-”all”时，会切换回all状态，展示所有状态todos" class="headerlink" title="当路由id为filter=”all”时，会切换回all状态，展示所有状态todos"></a>当路由id为filter=”all”时，会切换回all状态，展示所有状态todos</h3><h3 id="当路由id为filter-”active”时，点击-active-状态，展示没有完成的todos"><a href="#当路由id为filter-”active”时，点击-active-状态，展示没有完成的todos" class="headerlink" title="当路由id为filter=”active”时，点击 active 状态，展示没有完成的todos"></a>当路由id为filter=”active”时，点击 active 状态，展示没有完成的todos</h3><h3 id="当路由id为filter-”completed”时，点击completed状态，展示已完成的-todos"><a href="#当路由id为filter-”completed”时，点击completed状态，展示已完成的-todos" class="headerlink" title="当路由id为filter=”completed”时，点击completed状态，展示已完成的 todos"></a>当路由id为filter=”completed”时，点击completed状态，展示已完成的 todos</h3><h2 id="当在某路由原地刷新，列表数据保持和路由对应的状态不变-通过created来实现"><a href="#当在某路由原地刷新，列表数据保持和路由对应的状态不变-通过created来实现" class="headerlink" title="当在某路由原地刷新，列表数据保持和路由对应的状态不变,通过created来实现"></a>当在某路由原地刷新，列表数据保持和路由对应的状态不变,通过created来实现</h2>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -655,197 +504,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiaozhao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Naokotong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/21/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-21 16:30:56" itemprop="dateCreated datePublished" datetime="2019-04-21T16:30:56+08:00">2019-04-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-22 22:11:30" itemprop="dateModified" datetime="2019-04-22T22:11:30+08:00">2019-04-22</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/skill/" itemprop="url" rel="index"><span itemprop="name">skill</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="如何使用HEXO-Gitub搭建一个简单的个人博客"><a href="#如何使用HEXO-Gitub搭建一个简单的个人博客" class="headerlink" title="如何使用HEXO + Gitub搭建一个简单的个人博客"></a>如何使用HEXO + Gitub搭建一个简单的个人博客</h1><h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p><img src="/img/1.jpg"></p>
-<h2 id="相关步骤："><a href="#相关步骤：" class="headerlink" title="相关步骤："></a>相关步骤：</h2><h3 id="1、安装Node-js和配置好Node-js环境"><a href="#1、安装Node-js和配置好Node-js环境" class="headerlink" title="1、安装Node.js和配置好Node.js环境"></a>1、安装Node.js和配置好Node.js环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<h3 id="2、安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择"><a href="#2、安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择" class="headerlink" title="2、安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择"></a>2、安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置鼠标右键能够出现如下两个选择</h3><p><img src="/img/01.png" alt></p>
-<h3 id="3、Github账户注册和新建项目，项目必须要遵守格式：账户名-github-io，不然接下来会有很多麻烦。并且需要勾选Initialize-this-repository-with-a-README"><a href="#3、Github账户注册和新建项目，项目必须要遵守格式：账户名-github-io，不然接下来会有很多麻烦。并且需要勾选Initialize-this-repository-with-a-README" class="headerlink" title="3、Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README"></a>3、Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README</h3><p><img src="/img/02.png" alt></p>
-<h3 id="在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub-Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。"><a href="#在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub-Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。" class="headerlink" title="在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。"></a>在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。</h3><p><img src="/img/03.png" alt></p>
-<h3 id="4、安装Hexo，在自己认为合适的地方创个文件夹，我是在左面建了一个boke文件夹。然后通过命令行进入到该文件夹里面"><a href="#4、安装Hexo，在自己认为合适的地方创个文件夹，我是在左面建了一个boke文件夹。然后通过命令行进入到该文件夹里面" class="headerlink" title="4、安装Hexo，在自己认为合适的地方创个文件夹，我是在左面建了一个boke文件夹。然后通过命令行进入到该文件夹里面"></a>4、安装Hexo，在自己认为合适的地方创个文件夹，我是在左面建了一个boke文件夹。然后通过命令行进入到该文件夹里面</h3><h3 id="输入npm-install-hexo-g，开始安装Hexo"><a href="#输入npm-install-hexo-g，开始安装Hexo" class="headerlink" title="输入npm install hexo -g，开始安装Hexo"></a>输入npm install hexo -g，开始安装Hexo</h3><p><img src="/img/04.png"></p>
-<h3 id="输入hexo-v，检查hexo是否安装成功"><a href="#输入hexo-v，检查hexo是否安装成功" class="headerlink" title="输入hexo -v，检查hexo是否安装成功"></a>输入hexo -v，检查hexo是否安装成功</h3><p><img src="/img/05.png"></p>
-<h3 id="输入hexo-init，初始化该文件夹（有点漫长的等待。。。）"><a href="#输入hexo-init，初始化该文件夹（有点漫长的等待。。。）" class="headerlink" title="输入hexo init，初始化该文件夹（有点漫长的等待。。。）"></a>输入hexo init，初始化该文件夹（有点漫长的等待。。。）</h3><p><img src="/img/06.png"><br><img src="/img/07.png"></p>
-<h3 id="看到后面的“Start-blogging-with-Hexo！”，激动有木有！！！！！"><a href="#看到后面的“Start-blogging-with-Hexo！”，激动有木有！！！！！" class="headerlink" title="看到后面的“Start blogging with Hexo！”，激动有木有！！！！！"></a>看到后面的“Start blogging with Hexo！”，激动有木有！！！！！</h3><h3 id="输入npm-install，安装所需要的组件"><a href="#输入npm-install，安装所需要的组件" class="headerlink" title="输入npm install，安装所需要的组件"></a>输入npm install，安装所需要的组件</h3><h3 id="输入hexo-g，首次体验Hexo"><a href="#输入hexo-g，首次体验Hexo" class="headerlink" title="输入hexo g，首次体验Hexo"></a>输入hexo g，首次体验Hexo</h3><h3 id="输入hexo-s，开启服务器，访问该网址，正式体验Hexo"><a href="#输入hexo-s，开启服务器，访问该网址，正式体验Hexo" class="headerlink" title="输入hexo s，开启服务器，访问该网址，正式体验Hexo"></a>输入hexo s，开启服务器，访问该网址，正式体验Hexo</h3><h3 id="问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl-c停止服务器，接着输入“hexo-server-p-端口号”来改变端口号"><a href="#问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl-c停止服务器，接着输入“hexo-server-p-端口号”来改变端口号" class="headerlink" title="问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl+c停止服务器，接着输入“hexo server -p 端口号”来改变端口号"></a>问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl+c停止服务器，接着输入“hexo server -p 端口号”来改变端口号</h3><p><img src="/img/08.png"></p>
-<h2 id="5、将Hexo与Github-page联系起来，设置Git的user-name和email（如果是第一次的话）"><a href="#5、将Hexo与Github-page联系起来，设置Git的user-name和email（如果是第一次的话）" class="headerlink" title="5、将Hexo与Github page联系起来，设置Git的user name和email（如果是第一次的话）"></a>5、将Hexo与Github page联系起来，设置Git的user name和email（如果是第一次的话）</h2><p><img src="/img/09.png"></p>
-<h2 id="上图是在其文件夹里面鼠标右键，点击Git-Base-Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱"><a href="#上图是在其文件夹里面鼠标右键，点击Git-Base-Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱" class="headerlink" title="上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱"></a>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</h2><h3 id="上图是在其文件夹里面鼠标右键，点击Git-Base-Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱-1"><a href="#上图是在其文件夹里面鼠标右键，点击Git-Base-Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱-1" class="headerlink" title="上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱"></a>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</h3><h2 id="详细教程请看https-www-cnblogs-com-fengxiongZz-p-7707219-html"><a href="#详细教程请看https-www-cnblogs-com-fengxiongZz-p-7707219-html" class="headerlink" title="详细教程请看https://www.cnblogs.com/fengxiongZz/p/7707219.html"></a>详细教程请看<a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a></h2>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -865,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -948,6 +624,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Vuex-来完成我们的数据全局交互"><span class="nav-number">1.</span> <span class="nav-text">使用 Vuex 来完成我们的数据全局交互</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载vuex"><span class="nav-number">1.1.</span> <span class="nav-text">下载vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在根目录新建一个文件夹，创建-store-js文件，编辑公共内容，然后在main-js里引用"><span class="nav-number">1.2.</span> <span class="nav-text">在根目录新建一个文件夹，创建 store.js文件，编辑公共内容，然后在main.js里引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后在-main-js引用"><span class="nav-number">1.3.</span> <span class="nav-text">然后在 main.js引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过在根实例中注册-store-选项，该-store-实例会注入到根组件下的所有子组件中，且子组件能通过-this-store-访问到"><span class="nav-number">1.4.</span> <span class="nav-text">通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改Todos-vue的内容"><span class="nav-number">2.</span> <span class="nav-text">修改Todos.vue的内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#把组件内的内容用stort连接"><span class="nav-number">2.1.</span> <span class="nav-text">把组件内的内容用stort连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TheHeader-vue"><span class="nav-number">2.1.1.</span> <span class="nav-text">TheHeader.vue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TheList-vue"><span class="nav-number">2.1.2.</span> <span class="nav-text">TheList.vue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TheFooter-vue"><span class="nav-number">2.1.3.</span> <span class="nav-text">TheFooter.vue</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大功告成，无Bug无报错"><span class="nav-number">3.</span> <span class="nav-text">大功告成，无Bug无报错</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1079,6 +772,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1094,6 +791,8 @@
 
   
 
+
+  
 
 
   
