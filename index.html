@@ -337,6 +337,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/21/CRM 销售机会信息管理（三）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaozhao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Naokotong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/21/CRM 销售机会信息管理（三）/" class="post-title-link" itemprop="url">CRM 销售机会信息管理（三）</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 16:53:20 / 修改时间：17:51:19" itemprop="dateCreated datePublished" datetime="2019-05-21T16:53:20+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="3-8-线索跟踪"><a href="#3-8-线索跟踪" class="headerlink" title="3.8 - 线索跟踪"></a>3.8 - 线索跟踪</h2><h3 id="在用户提交了个人信息后，后台产生了线索数据，接下来我们需要对线索进行跟踪和处理。在本任务中，我们需要完成对线索的编辑还有为其添加跟踪记录。在线索的编辑页面，我们通过线索-ID-获取到线索的内容，在页面展示初始化的数据。通过编辑选择用户的意向状态，以及分配给不同的销售。同时在线索列表中，需要展示该分配的销售名称。"><a href="#在用户提交了个人信息后，后台产生了线索数据，接下来我们需要对线索进行跟踪和处理。在本任务中，我们需要完成对线索的编辑还有为其添加跟踪记录。在线索的编辑页面，我们通过线索-ID-获取到线索的内容，在页面展示初始化的数据。通过编辑选择用户的意向状态，以及分配给不同的销售。同时在线索列表中，需要展示该分配的销售名称。" class="headerlink" title="在用户提交了个人信息后，后台产生了线索数据，接下来我们需要对线索进行跟踪和处理。在本任务中，我们需要完成对线索的编辑还有为其添加跟踪记录。在线索的编辑页面，我们通过线索 ID 获取到线索的内容，在页面展示初始化的数据。通过编辑选择用户的意向状态，以及分配给不同的销售。同时在线索列表中，需要展示该分配的销售名称。"></a>在用户提交了个人信息后，后台产生了线索数据，接下来我们需要对线索进行跟踪和处理。在本任务中，我们需要完成对线索的编辑还有为其添加跟踪记录。在线索的编辑页面，我们通过线索 ID 获取到线索的内容，在页面展示初始化的数据。通过编辑选择用户的意向状态，以及分配给不同的销售。同时在线索列表中，需要展示该分配的销售名称。</h3><p>新建线索记录 model<br>/models/log.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const Base = require(&apos;./base.js&apos;);</span><br><span class="line"></span><br><span class="line">class ClueLog extends Base &#123;</span><br><span class="line">  constructor(props = &apos;clue_log&apos;) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = new ClueLog()</span><br></pre></td></tr></table></figure></p>
+<h4 id="在控制器中添加页面渲染、修改、添加记录的方法"><a href="#在控制器中添加页面渲染、修改、添加记录的方法" class="headerlink" title="在控制器中添加页面渲染、修改、添加记录的方法"></a>在控制器中添加页面渲染、修改、添加记录的方法</h4><p>/controllers/clue.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">// ...</span><br><span class="line">const ClueLog = require(&apos;./../models/log.js&apos;);</span><br><span class="line">const User = require(&apos;./../models/user.js&apos;);</span><br><span class="line"></span><br><span class="line">const userController = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  log: async function(req,res,next) &#123;</span><br><span class="line">    try&#123;</span><br><span class="line">      const id = req.params.id;</span><br><span class="line">      const clues = await Clue.select(&#123; id &#125;)</span><br><span class="line">      const logs = await ClueLog.select(&#123; clue_id : id&#125;)</span><br><span class="line">      const users = await User.select(&#123; role: 2 &#125;)</span><br><span class="line">      res.locals.users = users.map(data =&gt; &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">          id: data.id,</span><br><span class="line">          name: data.name</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      res.locals.clue = clues[0]</span><br><span class="line">      res.locals.clue.created_time_display = formatTime(res.locals.clue.created_time);</span><br><span class="line">      res.locals.logs = logs.map((data)=&gt;&#123;</span><br><span class="line">        data.created_time_display = formatTime(data.created_time);</span><br><span class="line">        return data</span><br><span class="line">      &#125;);</span><br><span class="line">      res.render(&apos;admin/clue_log.tpl&apos;,res.locals)</span><br><span class="line">    &#125;catch(e)&#123;</span><br><span class="line">      res.locals.error = e;</span><br><span class="line">      res.render(&apos;error&apos;,res.locals);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  update: async function(req,res,next) &#123;</span><br><span class="line">    let status = req.body.status;</span><br><span class="line">    let remark = req.body.remark;</span><br><span class="line">    let id = req.params.id;</span><br><span class="line">    let user_id = req.body.user_id;</span><br><span class="line">    if(!status || !remark)&#123;</span><br><span class="line">      res.json(&#123; code: 0, message: &apos;缺少必要参数&apos; &#125;);</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    try&#123;</span><br><span class="line">      const clue = await Clue.update( id ,&#123; </span><br><span class="line">        status, remark, user_id</span><br><span class="line">      &#125;);</span><br><span class="line">      res.json(&#123; </span><br><span class="line">        code: 200, </span><br><span class="line">        data: clue</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;catch(e)&#123;</span><br><span class="line">      console.log(e)</span><br><span class="line">      res.json(&#123; </span><br><span class="line">        code: 0,</span><br><span class="line">        message: &apos;内部错误&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  addLog: async function(req,res,next)&#123;</span><br><span class="line">    let content = req.body.content;</span><br><span class="line">    let created_time = new Date();</span><br><span class="line">    let clue_id = req.params.id;</span><br><span class="line">    if(!content)&#123;</span><br><span class="line">      res.json(&#123; code: 0, message: &apos;缺少必要参数&apos; &#125;);</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    try&#123;</span><br><span class="line">      const clue = await ClueLog.insert(&#123; </span><br><span class="line">        content, created_time, clue_id</span><br><span class="line">      &#125;);</span><br><span class="line">      res.json(&#123; </span><br><span class="line">        code: 200, </span><br><span class="line">        data: clue</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;catch(e)&#123;</span><br><span class="line">      console.log(e)</span><br><span class="line">      res.json(&#123; </span><br><span class="line">        code: 0,</span><br><span class="line">        message: &apos;内部错误&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="添加、修改相关路由"><a href="#添加、修改相关路由" class="headerlink" title="添加、修改相关路由"></a>添加、修改相关路由</h4><p>/routes/index.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// router.get(&apos;/admin/clue/:id&apos;, function(req, res, next) &#123;</span><br><span class="line">//   res.render(&apos;admin/clue_log&apos;);</span><br><span class="line">// &#125;);</span><br><span class="line">router.get(&apos;/admin/clue/:id&apos;, clueController.log);</span><br></pre></td></tr></table></figure></p>
+<p>routes/api.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//...</span><br><span class="line">router.put(&apos;/clue/:id&apos; , clueController.update);</span><br><span class="line">router.post(&apos;/clue/:id/log&apos;, clueController.addLog);</span><br><span class="line">//...</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改记录模版，渲染默认数据及创建和引入脚本文件。"><a href="#修改记录模版，渲染默认数据及创建和引入脚本文件。" class="headerlink" title="修改记录模版，渲染默认数据及创建和引入脚本文件。"></a>修改记录模版，渲染默认数据及创建和引入脚本文件。</h4><p>/views/admin/clue_log.tpl<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &apos;./../admin_layout.tpl&apos; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">&lt;div class=&quot;content-title&quot;&gt;跟踪线索&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;content-control&quot;&gt;</span><br><span class="line">  &lt;a href=&quot;/admin/clue&quot;&gt;返回线索列表 &gt;&gt;&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;content-mainer&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;form-section&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;客户名称：&#123;&#123;clue.name&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;联系电话：&#123;&#123;clue.phone&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;线索来源：&#123;&#123;clue.utm&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;创建时间：&#123;&#123;clue.created_time_display&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;用户状态：&lt;/span&gt;</span><br><span class="line">      &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">        &lt;select id=&quot;clueStatus&quot; class=&quot;form-input&quot;&gt;</span><br><span class="line">          &lt;option value=&quot;0&quot;&gt;请选择线索状态&lt;/option&gt;</span><br><span class="line">          &lt;option value=&quot;1&quot; &#123;% if clue.status == 1 %&#125; selected &#123;% endif %&#125;&gt;没有意向&lt;/option&gt;</span><br><span class="line">          &lt;option value=&quot;2&quot; &#123;% if clue.status == 2 %&#125; selected &#123;% endif %&#125;&gt;意向一般&lt;/option&gt;</span><br><span class="line">          &lt;option value=&quot;3&quot; &#123;% if clue.status == 3 %&#125; selected &#123;% endif %&#125;&gt;意向强烈&lt;/option&gt;</span><br><span class="line">          &lt;option value=&quot;4&quot; &#123;% if clue.status == 4 %&#125; selected &#123;% endif %&#125;&gt;完成销售&lt;/option&gt;</span><br><span class="line">          &lt;option value=&quot;5&quot; &#123;% if clue.status == 5 %&#125; selected &#123;% endif %&#125;&gt;取消销售&lt;/option&gt;</span><br><span class="line">        &lt;/select&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;form-text&quot;&gt;当前分配销售：&lt;/span&gt;</span><br><span class="line">      &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">        &lt;select id=&quot;clueUserId&quot; class=&quot;form-input&quot;&gt;</span><br><span class="line">          &lt;option value=&quot;0&quot;&gt;请选择分配销售&lt;/option&gt;</span><br><span class="line">          &#123;% for val in users  %&#125;</span><br><span class="line">          &lt;option value=&quot;&#123;&#123;val.id&#125;&#125;&quot; &#123;% if clue.user_id == val.id %&#125; selected &#123;% endif %&#125;&gt;&#123;&#123;val.name&#125;&#125;&lt;/option&gt;</span><br><span class="line">          &#123;% endfor %&#125;</span><br><span class="line">        &lt;/select&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;p class=&quot;form-text&quot;&gt;备注：&lt;/p&gt;</span><br><span class="line">      &lt;textarea id=&quot;clueRemark&quot; class=&quot;form-textarea&quot; placeholder=&quot;备注信息&quot;&gt;&#123;&#123;clue.remark&#125;&#125;&lt;/textarea&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">      &lt;input id=&quot;clueId&quot;  type=&quot;text&quot; hidden value=&quot;&#123;&#123;clue.id&#125;&#125;&quot; /&gt;</span><br><span class="line">      &lt;button id=&quot;clueSubmit&quot; class=&quot;form-button&quot;&gt;保存&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;log-section&quot;&gt;</span><br><span class="line">    &lt;ul class=&quot;log-list&quot;&gt;</span><br><span class="line">      &#123;% for val in logs  %&#125;</span><br><span class="line">      &lt;li class=&quot;log-item&quot;&gt;</span><br><span class="line">        &lt;p class=&quot;log-data&quot;&gt;&#123;&#123;val.created_time_display&#125;&#125;&lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;log-content&quot;&gt;&#123;&#123;val.content&#125;&#125;&lt;/p&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &#123;% else %&#125;</span><br><span class="line">        &lt;li class=&quot;log-item&quot;&gt;</span><br><span class="line">          &lt;p class=&quot;log-content&quot;&gt;当前没有记录&lt;/p&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">      &#123;% endfor %&#125;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;div class=&quot;form-section&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">        &lt;p class=&quot;form-text&quot;&gt;添加记录：&lt;/p&gt;</span><br><span class="line">        &lt;textarea id=&quot;logContent&quot; class=&quot;form-textarea&quot; placeholder=&quot;请输入本次跟踪的记录 ～&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;form-item&quot;&gt;</span><br><span class="line">        &lt;button id=&quot;logSubmit&quot; class=&quot;form-button&quot;&gt;添加&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block js %&#125;</span><br><span class="line">&lt;script src=&quot;/javascripts/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;/javascripts/clue_log.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="public-javascripts-clue-log-js"><a href="#public-javascripts-clue-log-js" class="headerlink" title="/public/javascripts/clue_log.js"></a>/public/javascripts/clue_log.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">const PAGE = &#123;</span><br><span class="line">  init: function() &#123;</span><br><span class="line">    this.bind();</span><br><span class="line">  &#125;,</span><br><span class="line">  bind: function() &#123;</span><br><span class="line">    $(&apos;#clueSubmit&apos;).bind(&apos;click&apos;,this.handleEditClueSubmit);</span><br><span class="line">    $(&apos;#logSubmit&apos;).bind(&apos;click&apos;,this.handleAddClueLog);</span><br><span class="line">  &#125;,</span><br><span class="line">  handleEditClueSubmit: function() &#123;</span><br><span class="line">    let id = $(&apos;#clueId&apos;).val();</span><br><span class="line">    let status = $(&apos;#clueStatus&apos;).val();</span><br><span class="line">    let remark = $(&apos;#clueRemark&apos;).val();</span><br><span class="line">    let user_id = $(&apos;#clueUserId&apos;).val();</span><br><span class="line">    status = Number(status)</span><br><span class="line">    if(!id  || !status || !remark || !user_id)&#123;</span><br><span class="line">      alert(&apos;请输入必要参数&apos;);</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: &apos;/api/clue/&apos; + id,</span><br><span class="line">        data: &#123; remark, status, user_id &#125;,</span><br><span class="line">        type: &apos;PUT&apos;,</span><br><span class="line">        beforeSend: function() &#123;</span><br><span class="line">          $(&quot;#clueSubmit&quot;).attr(&quot;disabled&quot;,true);</span><br><span class="line">        &#125;,</span><br><span class="line">        success: function(data) &#123;</span><br><span class="line">          if(data.code === 200)&#123;</span><br><span class="line">            alert(&apos;编辑成功！&apos;)</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">            alert(data.message)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        error: function(err) &#123;</span><br><span class="line">          console.log(err)</span><br><span class="line">        &#125;,</span><br><span class="line">        complete: function() &#123;</span><br><span class="line">          $(&quot;#clueSubmit&quot;).attr(&quot;disabled&quot;,false);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  handleAddClueLog: function() &#123;</span><br><span class="line">    let content = $(&apos;#logContent&apos;).val();</span><br><span class="line">    let id = $(&apos;#clueId&apos;).val();</span><br><span class="line">    if(!content)&#123;</span><br><span class="line">      alert(&apos;请输入必要参数&apos;);</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: &apos;/api/clue/&apos; + id +&apos;/log&apos;,</span><br><span class="line">        data: &#123; content &#125;,</span><br><span class="line">        type: &apos;POST&apos;,</span><br><span class="line">        beforeSend: function() &#123;</span><br><span class="line">          $(&quot;#logSubmit&quot;).attr(&quot;disabled&quot;,true);</span><br><span class="line">        &#125;,</span><br><span class="line">        success: function(data) &#123;</span><br><span class="line">          if(data.code === 200)&#123;</span><br><span class="line">            alert(&apos;添加成功！&apos;)</span><br><span class="line">            location.reload();</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">            alert(data.message)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        error: function(err) &#123;</span><br><span class="line">          console.log(err)</span><br><span class="line">        &#125;,</span><br><span class="line">        complete: function() &#123;</span><br><span class="line">          $(&quot;#logSubmit&quot;).attr(&quot;disabled&quot;,false);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">PAGE.init();</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/CRM 销售机会信息管理（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -399,7 +564,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-15 16:03:29" itemprop="dateModified" datetime="2019-05-15T16:03:29+08:00">2019-05-15</time>
+                <time title="修改时间：2019-05-21 16:52:10" itemprop="dateModified" datetime="2019-05-21T16:52:10+08:00">2019-05-21</time>
               
             
           </span>
@@ -487,10 +652,7 @@
 <h4 id="设置跳转模块，网页要清除cookie才能顺利退出"><a href="#设置跳转模块，网页要清除cookie才能顺利退出" class="headerlink" title="设置跳转模块，网页要清除cookie才能顺利退出"></a>设置跳转模块，网页要清除cookie才能顺利退出</h4><p>controllers/outlogin.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const logoutcontroller = &#123;</span><br><span class="line">  outlogin:async function(req,res,next)&#123;</span><br><span class="line">    res.clearCookie(&apos;ac&apos;,&apos;user_name&apos;);//清除cookie</span><br><span class="line">    res.clearCookie(&apos;user_name&apos;);</span><br><span class="line">    res.redirect(&apos;/admin/login&apos;);//设置跳转路径</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">module.exports = logoutcontroller;</span><br></pre></td></tr></table></figure></p>
 <p>routes/index<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">···</span><br><span class="line">var logoutcontroller = require(&apos;./../controllers/outlogin.js&apos;);//引入跳转模块</span><br><span class="line">/* GET home page. */</span><br><span class="line">···</span><br><span class="line">router.get(&apos;/admin/outlogin&apos;,logoutcontroller.outlogin);//设置路由</span><br><span class="line"></span><br><span class="line">module.exports = router;</span><br></pre></td></tr></table></figure></p>
 <h4 id="在公共后台加上退出选项"><a href="#在公共后台加上退出选项" class="headerlink" title="在公共后台加上退出选项"></a>在公共后台加上退出选项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">    &lt;header class=&quot;page-header&quot;&gt;</span><br><span class="line">      &lt;img class=&quot;page-header-img&quot; src=&quot;https://www.mercedes-benz.com.cn/content/dam/mb-cn/footer/mercedes-benz-logo-desktop.png&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;head-name&quot;&gt;林熙&lt;/div&gt;</span><br><span class="line">      &lt;a href=&quot;/admin/outlogin&quot; id=&quot;head-quit&quot;&gt;退出&lt;/a&gt;//输出路径/admin/outlogin</span><br><span class="line">    &lt;/header&gt;</span><br></pre></td></tr></table></figure>
-<p>####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-
+<h2 id="3-7-线索记录"><a href="#3-7-线索记录" class="headerlink" title="3.7 - 线索记录"></a>3.7 - 线索记录</h2><h4 id="落地页会在各地社交媒体中投放，例如百度推广、朋友圈广告等，拥有意向的用户会填写相关的个人信息进行预约，然后客户将会进行跟踪。本任务我们需要收集落地页中提交的信息，存放到数据库中，并在线索页面中展示。"><a href="#落地页会在各地社交媒体中投放，例如百度推广、朋友圈广告等，拥有意向的用户会填写相关的个人信息进行预约，然后客户将会进行跟踪。本任务我们需要收集落地页中提交的信息，存放到数据库中，并在线索页面中展示。" class="headerlink" title="落地页会在各地社交媒体中投放，例如百度推广、朋友圈广告等，拥有意向的用户会填写相关的个人信息进行预约，然后客户将会进行跟踪。本任务我们需要收集落地页中提交的信息，存放到数据库中，并在线索页面中展示。"></a>落地页会在各地社交媒体中投放，例如百度推广、朋友圈广告等，拥有意向的用户会填写相关的个人信息进行预约，然后客户将会进行跟踪。本任务我们需要收集落地页中提交的信息，存放到数据库中，并在线索页面中展示。</h4><h4 id="落地页提交的信息需要包括：用户姓名、手机以及数据来源（在-URL-地址参数中获取-）"><a href="#落地页提交的信息需要包括：用户姓名、手机以及数据来源（在-URL-地址参数中获取-）" class="headerlink" title="落地页提交的信息需要包括：用户姓名、手机以及数据来源（在 URL 地址参数中获取 ）"></a>落地页提交的信息需要包括：用户姓名、手机以及数据来源（在 URL 地址参数中获取 ）</h4><h4 id="线索入库时候，需要记录服务器时间到数据库中（客户端时间会有差异性）。"><a href="#线索入库时候，需要记录服务器时间到数据库中（客户端时间会有差异性）。" class="headerlink" title="线索入库时候，需要记录服务器时间到数据库中（客户端时间会有差异性）。"></a>线索入库时候，需要记录服务器时间到数据库中（客户端时间会有差异性）。</h4><h4 id="后台线索列表中，提交时间需要经过格式化处理，如：2019-04-02-13-45。"><a href="#后台线索列表中，提交时间需要经过格式化处理，如：2019-04-02-13-45。" class="headerlink" title="后台线索列表中，提交时间需要经过格式化处理，如：2019-04-02 13:45。"></a>后台线索列表中，提交时间需要经过格式化处理，如：2019-04-02 13:45。</h4><h4 id="落地页在获取用户姓名、手机之外还需要在获取-URL中获取来源参数，例如：http-localhost-3000-utm-baidu-，那么需要获取浏览器地址中-utm-的参数值，baidu-。"><a href="#落地页在获取用户姓名、手机之外还需要在获取-URL中获取来源参数，例如：http-localhost-3000-utm-baidu-，那么需要获取浏览器地址中-utm-的参数值，baidu-。" class="headerlink" title="落地页在获取用户姓名、手机之外还需要在获取 URL中获取来源参数，例如：http://localhost:3000?utm=baidu ，那么需要获取浏览器地址中 utm 的参数值，baidu 。"></a>落地页在获取用户姓名、手机之外还需要在获取 URL中获取来源参数，例如：<a href="http://localhost:3000?utm=baidu" target="_blank" rel="noopener">http://localhost:3000?utm=baidu</a> ，那么需要获取浏览器地址中 utm 的参数值，baidu 。</h4><h4 id="线索列表中-controller-获取到线索数据，可以-map-一次进行创建时间的-Dateformat。"><a href="#线索列表中-controller-获取到线索数据，可以-map-一次进行创建时间的-Dateformat。" class="headerlink" title="线索列表中 controller 获取到线索数据，可以 map 一次进行创建时间的 Dateformat。"></a>线索列表中 controller 获取到线索数据，可以 map 一次进行创建时间的 Dateformat。</h4>
           
         
       
@@ -1731,7 +1893,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
