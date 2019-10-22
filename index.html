@@ -337,171 +337,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/crm-porsche/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiaozhao">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Naokotong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/10/08/crm-porsche/" class="post-title-link" itemprop="url">CRM 销售机会信息管理（二）</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-08 10:40:31 / 修改时间：10:41:12" itemprop="dateCreated datePublished" datetime="2019-10-08T10:40:31+08:00">2019-10-08</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="3-5-用户管理"><a href="#3-5-用户管理" class="headerlink" title="3.5 - 用户管理"></a>3.5 - 用户管理</h2><h3 id="在本次用户管理任务中，我们需要连接数据库实现用户的增删改查。我们可以通过用户新建页面提交新建用户并记录到数据库，通过用户列表页面获取数据库中用户的数据并展示出来，在用户编辑页中对匹配的用户内容进行编辑和修改。在本次任务中，我们推荐用-knex-js-完成数据库的交互逻辑，同时我们对这部分的数据库及逻辑操作有-MVC-代码结构的要求。"><a href="#在本次用户管理任务中，我们需要连接数据库实现用户的增删改查。我们可以通过用户新建页面提交新建用户并记录到数据库，通过用户列表页面获取数据库中用户的数据并展示出来，在用户编辑页中对匹配的用户内容进行编辑和修改。在本次任务中，我们推荐用-knex-js-完成数据库的交互逻辑，同时我们对这部分的数据库及逻辑操作有-MVC-代码结构的要求。" class="headerlink" title="在本次用户管理任务中，我们需要连接数据库实现用户的增删改查。我们可以通过用户新建页面提交新建用户并记录到数据库，通过用户列表页面获取数据库中用户的数据并展示出来，在用户编辑页中对匹配的用户内容进行编辑和修改。在本次任务中，我们推荐用 knex.js 完成数据库的交互逻辑，同时我们对这部分的数据库及逻辑操作有 MVC 代码结构的要求。"></a>在本次用户管理任务中，我们需要连接数据库实现用户的增删改查。我们可以通过用户新建页面提交新建用户并记录到数据库，通过用户列表页面获取数据库中用户的数据并展示出来，在用户编辑页中对匹配的用户内容进行编辑和修改。在本次任务中，我们推荐用 knex.js 完成数据库的交互逻辑，同时我们对这部分的数据库及逻辑操作有 MVC 代码结构的要求。</h3><h3 id="Knex-js是为-Postgres，MSSQL，MySQL，MariaDB，SQLite3，Oracle-和-Amazon-Redshift设计的SQL查询构建器，其设计灵活，便于携带并且使用起来非常有趣。它具有传统的节点样式回调以及用于清洁异步流控制的承诺接口，流接口，全功能查询和模式构建器，事务支持（带保存点），连接池-以及不同查询客户和方言之间的标准化响应。Knex的主要目标环境是Node-js，您需要安装该-knex-库，然后安装适当的数据库库。"><a href="#Knex-js是为-Postgres，MSSQL，MySQL，MariaDB，SQLite3，Oracle-和-Amazon-Redshift设计的SQL查询构建器，其设计灵活，便于携带并且使用起来非常有趣。它具有传统的节点样式回调以及用于清洁异步流控制的承诺接口，流接口，全功能查询和模式构建器，事务支持（带保存点），连接池-以及不同查询客户和方言之间的标准化响应。Knex的主要目标环境是Node-js，您需要安装该-knex-库，然后安装适当的数据库库。" class="headerlink" title="Knex.js是为 Postgres，MSSQL，MySQL，MariaDB，SQLite3，Oracle 和 Amazon Redshift设计的SQL查询构建器，其设计灵活，便于携带并且使用起来非常有趣。它具有传统的节点样式回调以及用于清洁异步流控制的承诺接口，流接口，全功能查询和模式构建器，事务支持（带保存点），连接池 以及不同查询客户和方言之间的标准化响应。Knex的主要目标环境是Node.js，您需要安装该 knex 库，然后安装适当的数据库库。"></a>Knex.js是为 Postgres，MSSQL，MySQL，MariaDB，SQLite3，Oracle 和 Amazon Redshift设计的SQL查询构建器，其设计灵活，便于携带并且使用起来非常有趣。它具有传统的节点样式回调以及用于清洁异步流控制的承诺接口，流接口，全功能查询和模式构建器，事务支持（带保存点），连接池 以及不同查询客户和方言之间的标准化响应。Knex的主要目标环境是Node.js，您需要安装该 knex 库，然后安装适当的数据库库。</h3><p>任务要求：</p>
-<h4 id="安装-Knex-js-连接数据库。"><a href="#安装-Knex-js-连接数据库。" class="headerlink" title="安装 Knex.js 连接数据库。"></a>安装 Knex.js 连接数据库。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -save knex mysql</span><br></pre></td></tr></table></figure>
-<p>knex中文文档  <a href="https://www.songxingguo.com/2018/06/30/knex.js-query/" target="_blank" rel="noopener">https://www.songxingguo.com/2018/06/30/knex.js-query/</a></p>
-<h4 id="在根目录中新建-config-文件用来存放数据库的配置信息。"><a href="#在根目录中新建-config-文件用来存放数据库的配置信息。" class="headerlink" title="在根目录中新建 config 文件用来存放数据库的配置信息。"></a>在根目录中新建 config 文件用来存放数据库的配置信息。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const configs = &#123;</span><br><span class="line">  mysql: &#123;</span><br><span class="line">    host: &apos;127.0.0.1&apos;,//地址</span><br><span class="line">    port: &apos;3306&apos;,//端口</span><br><span class="line">    user: &apos;root&apos;,//连接名</span><br><span class="line">    password: &apos;&apos;,//密码</span><br><span class="line">    database: &apos;mercedesbenz-crm&apos;//数据库名</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">module.exports = configs</span><br></pre></td></tr></table></figure>
-<h4 id="在根目录中新建-models-文件夹用户存放数据库操作相关文件。"><a href="#在根目录中新建-models-文件夹用户存放数据库操作相关文件。" class="headerlink" title="在根目录中新建 models 文件夹用户存放数据库操作相关文件。"></a>在根目录中新建 models 文件夹用户存放数据库操作相关文件。</h4><p>models/knex.js 数据库配置,用于初始化mysql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const configs = require(&apos;../config&apos;);//引入初始化配置信息</span><br><span class="line">module.exports = require(&apos;knex&apos;)(&#123;</span><br><span class="line">  client: &apos;mysql&apos;,</span><br><span class="line">  connection: &#123;</span><br><span class="line">    host: configs.mysql.host,//把configs里的配置信息赋值到host，下同</span><br><span class="line">    port: configs.mysql.port,</span><br><span class="line">    user: configs.mysql.user,</span><br><span class="line">    password: configs.mysql.password,</span><br><span class="line">    database: configs.mysql.database,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/21/CRM 销售机会信息管理（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -714,7 +549,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/07/CRM 销售机会信息管理（二）/" class="post-title-link" itemprop="url">CRM 销售机会信息管理（二）</a>
+                <a href="/2019/05/07/CRM 销售机会信息管理（二）/" class="post-title-link" itemprop="url">CRM 销售机会信息管理（二）3216346546</a>
               
             
           </h1>
@@ -756,7 +591,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-24 10:35:43" itemprop="dateModified" datetime="2019-05-24T10:35:43+08:00">2019-05-24</time>
+                <time title="修改时间：2019-10-22 16:44:03" itemprop="dateModified" datetime="2019-10-22T16:44:03+08:00">2019-10-22</time>
               
             
           </span>
@@ -2085,7 +1920,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
