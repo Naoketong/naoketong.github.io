@@ -337,6 +337,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/OKR目标管理系统（二）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaozhao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Naokotong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/24/OKR目标管理系统（二）/" class="post-title-link" itemprop="url">OKR目标管理系统（二）</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-24 10:56:18 / 修改时间：10:56:45" itemprop="dateCreated datePublished" datetime="2019-10-24T10:56:18+08:00">2019-10-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/koa/" itemprop="url" rel="index"><span itemprop="name">koa</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/22/OKR目标管理系统（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -382,12 +542,24 @@
                 
               
 
-              <time title="创建时间：2019-10-22 17:12:27 / 修改时间：17:29:03" itemprop="dateCreated datePublished" datetime="2019-10-22T17:12:27+08:00">2019-10-22</time>
+              <time title="创建时间：2019-10-22 17:12:27" itemprop="dateCreated datePublished" datetime="2019-10-22T17:12:27+08:00">2019-10-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-24 10:53:15" itemprop="dateModified" datetime="2019-10-24T10:53:15+08:00">2019-10-24</time>
               
             
           </span>
@@ -458,13 +630,19 @@
 <p>任务八：OKR CUD<br>主要通过  Node.js API 完成相关接口，在小程序中完成 OKR 的新建、列表、编辑、删除功能。</p>
 <p>任务九：KR 关联页<br>主要通过  Node.js API 完成相关接口，在 Todes 页面中完成单项 Todo 与 KR 的绑定的展示、关联、取消关联功能。</p>
 <p>任务十：OKR 详情<br>主要通过  Node.js API 完成相关接口，在小程序中 OKR 完成点击单项目标所展现的 OKR详情。</p>
-<p>##3-任务详情页</p>
-<p>###3.1 -环境搭建</p>
-<p>####Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。</p>
-<p>####正因为 Koa 没有捆绑任何中间件，所以我们在开发应用的时候一定要注意自己开发，或者找 Koa 对应的中间件，并且还要注意对应的版本。本次任务中我们需要用到 Koa2 来搭建 Web 服务，通过 koa-router 中间件配置一个测试的 API。</p>
-<p>任务要求：</p>
-<p>1、使用  Koa2 来搭建 Web 服务。<br>2、实现全局响应处理模块，捕捉全局错误并配置返回值。<br>3、实现测试 API 返回 Code200<br>任务提示：</p>
-<p>1、下载安装 koa 、koa-router、koa-bodyparser<br>2、新建 middlewares/response ，try 处理响应结果 catch 处理全局错误信息<br>3、新建 controllers/test ，返回 Code200，MessageSuccess<br>4、把路由的配置分离到单独的 routes 5、文件夹中，并配置测试 API<br>路由需要使用 api 前缀<br>参考资料：<br><a href="https://koajs.com/" target="_blank" rel="noopener">https://koajs.com/</a></p>
+<h2 id="3-任务详情页"><a href="#3-任务详情页" class="headerlink" title="3-任务详情页"></a>3-任务详情页</h2><h3 id="3-1-环境搭建"><a href="#3-1-环境搭建" class="headerlink" title="3.1 -环境搭建"></a>3.1 -环境搭建</h3><h4 id="Koa-是一个新的-web-框架，由-Express-幕后的原班人马打造，-致力于成为-web-应用和-API-开发领域中的一个更小、更富有表现力、更健壮的基石。-通过利用-async-函数，Koa-帮你丢弃回调函数，并有力地增强错误处理。-Koa-并没有捆绑任何中间件，-而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。"><a href="#Koa-是一个新的-web-框架，由-Express-幕后的原班人马打造，-致力于成为-web-应用和-API-开发领域中的一个更小、更富有表现力、更健壮的基石。-通过利用-async-函数，Koa-帮你丢弃回调函数，并有力地增强错误处理。-Koa-并没有捆绑任何中间件，-而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。" class="headerlink" title="Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。"></a>Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。</h4><h4 id="正因为-Koa-没有捆绑任何中间件，所以我们在开发应用的时候一定要注意自己开发，或者找-Koa-对应的中间件，并且还要注意对应的版本。本次任务中我们需要用到-Koa2-来搭建-Web-服务，通过-koa-router-中间件配置一个测试的-API。"><a href="#正因为-Koa-没有捆绑任何中间件，所以我们在开发应用的时候一定要注意自己开发，或者找-Koa-对应的中间件，并且还要注意对应的版本。本次任务中我们需要用到-Koa2-来搭建-Web-服务，通过-koa-router-中间件配置一个测试的-API。" class="headerlink" title="正因为 Koa 没有捆绑任何中间件，所以我们在开发应用的时候一定要注意自己开发，或者找 Koa 对应的中间件，并且还要注意对应的版本。本次任务中我们需要用到 Koa2 来搭建 Web 服务，通过 koa-router 中间件配置一个测试的 API。"></a>正因为 Koa 没有捆绑任何中间件，所以我们在开发应用的时候一定要注意自己开发，或者找 Koa 对应的中间件，并且还要注意对应的版本。本次任务中我们需要用到 Koa2 来搭建 Web 服务，通过 koa-router 中间件配置一个测试的 API。</h4><p>任务要求：</p>
+<p>1、使用  Koa2 来搭建 Web 服务。</p>
+<p>2、实现全局响应处理模块，捕捉全局错误并配置返回值。<br>3、实现测试 API 返回 Code200</p>
+<p>任务提示：</p>
+<p>1、下载安装 koa 、koa-router、koa-bodyparser</p>
+<p>初始化项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Desktop &amp;&amp; mkdir okr_koa &amp;&amp; cd okr_koa</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
+<p>下载相关依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install koa koa-router koa-bodyparser axios --save</span><br></pre></td></tr></table></figure></p>
+<p>2、新建 middlewares/response ，try 处理响应结果 catch 处理全局错误信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">const debug = require(&apos;debug&apos;)(&apos;koa-app&apos;)</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 响应处理模块</span><br><span class="line"> */</span><br><span class="line">module.exports = async function (ctx, next) &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    ctx.state.code = 0</span><br><span class="line">    ctx.state.data = &#123;&#125;</span><br><span class="line">    await next()</span><br><span class="line"></span><br><span class="line">    // 处理响应结果</span><br><span class="line">    // 如果直接写入在 body 中，则不作处理</span><br><span class="line">    // 如果写在 ctx.body 为空，则使用 state 作为响应</span><br><span class="line">    // ctx.body = &#123;</span><br><span class="line">    //     code:0,</span><br><span class="line">    //     data:&#123;&#125;</span><br><span class="line">    // &#125;</span><br><span class="line">    console.log(ctx.url)</span><br><span class="line">    ctx.body = ctx.body ? ctx.body : &#123;</span><br><span class="line">      code: ctx.state.code,</span><br><span class="line">      data: ctx.state.data</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; catch (e) &#123;</span><br><span class="line">    // catch 住全局的错误信息</span><br><span class="line">    debug(&apos;Catch Error: %o&apos;, e)</span><br><span class="line">    // 设置状态码为 200 - 服务端错误</span><br><span class="line">    ctx.status = 200</span><br><span class="line"></span><br><span class="line">    // 输出详细的错误信息</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">      code: -1,</span><br><span class="line">      error: e &amp;&amp; e.message ? e.message : e.toString()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、新建 controllers/test ，返回 Code200，MessageSuccess<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const testController = &#123;</span><br><span class="line">  test: async (ctx, next) =&gt; &#123;</span><br><span class="line">    // ctx.body = &apos;Hello Koa!&apos;</span><br><span class="line">    let user_id = ctx.state.user_id</span><br><span class="line">    ctx.state.code = 200;</span><br><span class="line">    ctx.state.data = &#123; id: user_id &#125;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = testController;</span><br></pre></td></tr></table></figure></p>
+<p>4、把路由的配置分离到单独的 routes<br>routes/index.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const router = require(&apos;koa-router&apos;)(&#123;</span><br><span class="line">  prefix: &apos;/api&apos;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const testController = require(&apos;./../controllers/test.js&apos;)</span><br><span class="line"></span><br><span class="line">router.get(&apos;/test&apos;, testController.test)</span><br><span class="line"></span><br><span class="line">module.exports = router</span><br></pre></td></tr></table></figure></p>
+<p>5、文件夹中，并配置测试 API<br>路由需要使用 api 前缀<br>参考资料：<br><a href="https://koajs.com/" target="_blank" rel="noopener">https://koajs.com/</a></p>
+<h2 id="3-2-数据库配置"><a href="#3-2-数据库配置" class="headerlink" title="3.2 - 数据库配置"></a>3.2 - 数据库配置</h2><h3 id="本次任务我们需要配置数据库的及其表设计。在数据库的配置中，我们首要根据业务需求梳理大框架模块，本次-OKR-项目主要是做什么-，有哪几个重要的板块-？项目主要为：用户定义-OKR，然后每天添加代办事项，代办事项和-OKR-关联，根据代办事项的完成状态统计出-OKR-的完成度及状态。"><a href="#本次任务我们需要配置数据库的及其表设计。在数据库的配置中，我们首要根据业务需求梳理大框架模块，本次-OKR-项目主要是做什么-，有哪几个重要的板块-？项目主要为：用户定义-OKR，然后每天添加代办事项，代办事项和-OKR-关联，根据代办事项的完成状态统计出-OKR-的完成度及状态。" class="headerlink" title="本次任务我们需要配置数据库的及其表设计。在数据库的配置中，我们首要根据业务需求梳理大框架模块，本次 OKR 项目主要是做什么 ，有哪几个重要的板块 ？项目主要为：用户定义 OKR，然后每天添加代办事项，代办事项和 OKR 关联，根据代办事项的完成状态统计出 OKR 的完成度及状态。"></a>本次任务我们需要配置数据库的及其表设计。在数据库的配置中，我们首要根据业务需求梳理大框架模块，本次 OKR 项目主要是做什么 ，有哪几个重要的板块 ？项目主要为：用户定义 OKR，然后每天添加代办事项，代办事项和 OKR 关联，根据代办事项的完成状态统计出 OKR 的完成度及状态。</h3><p>任务要求：<br>配置数据库，生成 sql 文件，放置在更目录的 db 文件夹中<br>任务提示：<br>1、用户信息表 user<br>2、目标表 objective<br>3、成就表 keyresult<br>4、代办事项表 todo<br>5、代办事项与成就关联表 todo_keyresult</p>
+<h2 id="3-3-页面模版"><a href="#3-3-页面模版" class="headerlink" title="3.3 - 页面模版"></a>3.3 - 页面模版</h2><h3 id="本次任务我们需要为小程序配置页面模版，根据需求梳理出共有多少个页面，在-pages-目录下创建对应页面的文件夹和相关文件，并在-app-json-中配置-pages-以及-tabs。"><a href="#本次任务我们需要为小程序配置页面模版，根据需求梳理出共有多少个页面，在-pages-目录下创建对应页面的文件夹和相关文件，并在-app-json-中配置-pages-以及-tabs。" class="headerlink" title="本次任务我们需要为小程序配置页面模版，根据需求梳理出共有多少个页面，在 pages 目录下创建对应页面的文件夹和相关文件，并在 app.json 中配置 pages 以及 tabs。"></a>本次任务我们需要为小程序配置页面模版，根据需求梳理出共有多少个页面，在 pages 目录下创建对应页面的文件夹和相关文件，并在 app.json 中配置 pages 以及 tabs。</h3><h4 id="任务要求："><a href="#任务要求：" class="headerlink" title="任务要求："></a>任务要求：</h4><p>完成一下页面配置：<br>欢迎页<br>1、Todo 列表页<br>2、Todo Keyresult 绑定页<br>3、Todo 完成历史页<br>4、OKR 列表页<br>5、OKR 新建页<br>6、OKR 编辑页<br>7、OKR 详情页<br>任务提示：<br>“pages/welcome/welcome”<br>“pages/todo/todo”<br>“pages/todo_keyresult/todo_keyresult”<br>“pages/okr/okr”<br>“pages/okr_edit/okr_edit”<br>“pages/okr_create/okr_create”<br>“pages/okr_detail/okr_detail”<br>“pages/history/history”<br>微信小程序 app.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;pages&quot;: [</span><br><span class="line">    &quot;pages/welcome/welcome&quot;,</span><br><span class="line">    &quot;pages/todo/todo&quot;,</span><br><span class="line">    &quot;pages/todo_keyresult/todo_keyresult&quot;,</span><br><span class="line">    &quot;pages/okr/okr&quot;,</span><br><span class="line">    &quot;pages/okr_edit/okr_edit&quot;,</span><br><span class="line">    &quot;pages/okr_create/okr_create&quot;,</span><br><span class="line">    &quot;pages/okr_detail/okr_detail&quot;,</span><br><span class="line">    &quot;pages/history/history&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;window&quot;: &#123;</span><br><span class="line">    &quot;backgroundTextStyle&quot;: &quot;light&quot;,</span><br><span class="line">    &quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;,</span><br><span class="line">    &quot;navigationBarTitleText&quot;: &quot;WeChat&quot;,</span><br><span class="line">    &quot;navigationBarTextStyle&quot;: &quot;black&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;sitemapLocation&quot;: &quot;sitemap.json&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -2104,7 +2282,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
